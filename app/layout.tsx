@@ -15,9 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className="min-h-screen flex flex-col bg-gray-100">
+      <body className="min-h-screen flex flex-col bg-[#14161a]">
         <Navbar />
-        <main className="flex-1 bg-gray-100">
+        <main className="flex-1 bg-[#14161a]">
           {children}
         </main>
         <Footer />
