@@ -23,30 +23,33 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="bg-white border-b border-gray-200">
+        <nav className="bg-[#1c1f26] border-b border-[#2c3038] sticky top-0 z-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16 items-center">
-                    <Link href="/" className="text-xl font-semibold text-gray-900">
-                        ProductStore
+                    <Link href="/" className="font-display text-xl font-bold text-[#e8e6e1] tracking-tight">
+                        Product<span className="text-[#d97757]">Store</span>
                     </Link>
                     <div className="flex gap-6 items-center">
-                        <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors">
+                        <Link href="/" className="text-sm text-[#8b8f98] hover:text-[#e8e6e1] transition-colors">
                             Productos
                         </Link>
                         {rol === 'ADMIN' && (
-                            <Link href="/admin" className="text-gray-600 hover:text-gray-900 transition-colors">
+                            <Link href="/admin" className="text-sm text-[#8b8f98] hover:text-[#e8e6e1] transition-colors">
                                 Admin
                             </Link>
                         )}
                         {rol ? (
                             <button
                                 onClick={handleLogout}
-                                className="text-red-600 hover:text-red-800 transition-colors text-sm"
+                                className="text-sm text-[#d97757] hover:text-[#e08e6f] transition-colors"
                             >
                                 Cerrar sesión
                             </button>
                         ) : (
-                            <Link href="/login" className="text-gray-600 hover:text-gray-900 transition-colors">
+                            <Link
+                                href="/login"
+                                className="text-sm bg-[#d97757] text-[#14161a] font-medium px-4 py-1.5 rounded-full hover:bg-[#e08e6f] transition-colors"
+                            >
                                 Iniciar sesión
                             </Link>
                         )}
